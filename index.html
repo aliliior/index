@@ -1,0 +1,140 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8"><base>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://api.zhitaosoft.com:80/dzzz/static/thirdparty/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://api.zhitaosoft.com:80/dzzz/static/search/css/common.css">
+    <link rel="stylesheet" href="http://api.zhitaosoft.com:80/dzzz/static/search/css/detail.css">
+    <script src="http://api.zhitaosoft.com:80/dzzz/static/thirdparty/jquery/jquery.js"></script>
+    <script src="http://api.zhitaosoft.com:80/dzzz/static/thirdparty/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://api.zhitaosoft.com:80/dzzz/static/thirdparty/validateform/Validform.min.js"></script>
+    <script src="http://api.zhitaosoft.com:80/dzzz/static/thirdparty/layer/layer.js"></script><link rel="stylesheet" href="http://api.zhitaosoft.com/dzzz/static/thirdparty/layer/theme/default/layer.css?v=3.1.1" id="layuicss-layer">
+    <title>证书查询结果</title>
+    <style type="text/css">
+    #downloadPDF {
+        cursor: pointer;
+    }
+    
+    .img-container {
+        position: relative;
+    }
+    
+    .img-container1 {
+        position: relative;
+    }
+    
+    .add-img {
+        position: absolute;
+        bottom: 15%;
+        right: 27%;
+        width: 22%;
+        height: 15%;
+    }
+    
+    .add-img1 {
+        position: absolute;
+        bottom: 6%;
+        right: 13%;
+        width: 22%;
+        height: 15%;
+    }
+    
+    .add-img>img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .add-img1>img {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>
+                <img class="logo" src="http://api.zhitaosoft.com:80/dzzz/static/search/img/logo.png">陕西省住建厅综合服务中心
+            </h1>
+        </header>
+        <div class="container" id="statt" style="display: block;">
+            <h3>证书查询结果</h3>
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4">姓名：</span> <span class="col-md-8" id="name">张红梅</span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4">性别：</span> <span class="col-md-8" id="sex">女</span>
+            </p></div>
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4">有效期至：</span> <span class="col-md-8" id="date">2028年07月23日</span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4">证书编号：</span> <span class="col-md-8" id="number">陕A062022014203</span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="img-container col-md-9 col-md-offset-1">
+                    <img src="https://jsjt-bucket.oss-cn-beijing.aliyuncs.com/upload/jspx/train_teaching/annex/20240206/%E6%96%87%E4%BB%B6.jpg" width="100%" alt="" id="img">
+                    <div class="add-img">
+                        <img src="http://api.zhitaosoft.com:80/dzzz/static/img/gg.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="statt1" style="display:none">
+            <h3>证书查询结果</h3>
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="daima_id"></span> <span class="col-md-8" id="daima"></span>
+                </p>
+    
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="faren_id"></span> <span class="col-md-8" id="faren"></span>
+            </p></div>
+    
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="mingcheng_id"></span> <span class="col-md-8" id="mingcheng"></span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="gongsi_id"></span> <span class="col-md-8" id="gongsi"></span>
+            </p></div>
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="shijian_id"></span> <span class="col-md-8" id="shijian"></span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="yuanjian_id"></span> <span class="col-md-8" id="yuanjian"></span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="bianhao_id"></span> <span class="col-md-8" id="bianhao"></span>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="jiguan_id"></span> <span class="col-md-8" id="jiguan"></span>
+                </p>
+    
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="zhusuo_id"></span> <span class="col-md-8" id="zhusuo"></span>
+            </p></div>
+    
+            <div class="row">
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-3" id="dengji_id"></span> <span class="col-md-9" id="dengji"></span>
+                </p>
+                <p class="col-md-5 col-md-offset-1">
+                    <span class="col-md-4" id="leixing_id"></span> <span class="col-md-8" id="leixing"></span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="img-container1 col-md-9 col-md-offset-1">
+                    <img src="http://zhujianzhengshu.oss-cn-beijing.aliyuncs.com/img/app/zhengjianzhao/7b56e14dd4e84a8b8daa561fe7643dd1.jpg" width="100%" alt="" id="img1">
+                    <div class="add-img1">
+                        <img id="zhang" src="http://api.zhitaosoft.com:80/dzzz/static/img/qy.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body></html>
